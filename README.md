@@ -24,4 +24,6 @@ Beware that if your input data differs from mine, your unit will to. check if yo
 
 The setup for regional model application is meant to focus on the results for one year (but is run for a warm up period of three years + the year we are interest in).
 
+You might consider the proposed folder structure, also provided in the repository (proposed_folder_structure.png)
+
 
