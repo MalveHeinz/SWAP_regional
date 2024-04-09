@@ -12,15 +12,15 @@ This repository is meant to help to run SWAP:
 - prepare soil input data and (extract_Soilhydro_input_for_spatial_application.R)
 - prepare cliamte input data for that (write_cliamte_inputfiles.R, template_climatedata.csv)
 
-The basic structure is to execute the runswap.bat alter the input files (swap.swp and crop.crp) from R.
-The input file are altered by simply changing certain parameters ad then writing the input files to your directory.
+The basic structure is to execute the runswap.bat file and alter the input files (swap.swp and <CROP>.crp) from R.
+The input files are altered by simply changing certain parameters and then writing the input files to your directory.
 
 The set-up for the regional application is meant for a grid of cells, in my case potato fields in a specific catchment.
-For each cell, first climate and soil input data and files are generated that can be called when SWAP is run for each cell.
+For each cell, first climate and soil input data and files are generated that can be called when SWAP is run for that cell.
 
 Since the SWAP output is relative to the input data (like mm/m2) also the output is on that scale, so you might want to upscale the results. 
 
-Beware that if your input data differs from mine, your unit will to. check if you need to convert the to SWAPs input data requirements.
+Beware that if your input data differs from mine, your units will to. check if you need to convert the to SWAPs input data requirements.
 
 The setup for regional model application is meant to focus on the results for one year (but is run for a warm up period of three years + the year we are interest in).
 
