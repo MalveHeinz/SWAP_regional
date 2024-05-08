@@ -25,6 +25,8 @@ Beware that if your input data differs from mine, your units will to. Check if y
 The setup for regional model application is meant to focus on the results for one year (but is run for a warm up period of three years + the year we are interest in).
 You might consider the proposed folder structure, also provided in the repository (proposed_folder_structure.png)
 
+In this repository I also provide the calibrated potato crop file for the Broye catchment in western Switzerland (mean temp = 9°C, annual precip = 1158mm, predominant soil texture = clay loam/sandy loam) --> PotatoD.crp
+
 There are two great approaches to run SWAP from R and python on : https://github.com/moritzshore/rswap and https://github.com/zawadzkim/pyswap
 
 
