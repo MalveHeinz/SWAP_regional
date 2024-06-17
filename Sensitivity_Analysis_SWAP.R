@@ -123,7 +123,17 @@ lhs_test<-sobol_matrices(N=N, params=params ,type = "LHS")
 ### Now get the actual values for the sample taken!
 #_______________________________________________________________________________
 
-###----------------- 03. from sample to parameter values  --------------------###
+###------------ 03. from normalized sample to parameter values  -------------###
+
+# assuming "parameter" is the vector of parameter values assigned in the ebginning of this^script (e.g. CF)
+# This is out syntax --> parameter [lhs_test[ ,column of parameter] * length(parmeter) + 1]
+# first we extract the column within our latin hypercube sample where the normalized latin hypercube sample (LHS) value of 
+# the parameter of interest are located (between 0 and 1) --> lhs_test[ ,column of parameter]
+# Then we multiply each element in this column by the length of our parameter --> lhs_test[, 1] * length(CF)
+# As lenght(parameter) give us the number of elements in this sequence, this scaling maps the normalized lHS values to indices
+# within the range of the parameter vector. The + 1 ensures, that the indices are in the range of 1 to length(CF)
+
+# e.g. lhs_test[1, 1] = 0.7218774 ;  0.7218774 * length(CF) = 67134.6 ; 67134.6 + 1 = 67135.6; CF[67135.6]  = 1.03
 
 CF <- CF[lhs_test[, 1] * length(CF) + 1]
 RSC <- RSC[lhs_test[, 2] * length(RSC) + 1]
